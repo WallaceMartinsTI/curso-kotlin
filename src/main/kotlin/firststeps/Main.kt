@@ -3,7 +3,7 @@ package firststeps
 import java.util.Scanner
 
 fun main() {
-    test()
+    println("Aulas separadas nas funções!")
 }
 
 fun class_intro() {
@@ -329,8 +329,4 @@ fun class_ex04_expression_with_mix_operators02() {
     // false
 
     println(exp)
-}
-
-fun test() {
-
 }
