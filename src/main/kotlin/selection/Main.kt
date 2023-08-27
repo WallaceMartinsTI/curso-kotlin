@@ -89,7 +89,8 @@ fun class_ex03_sort_person_by_age() {
         print(" SÊNIOR!")
     }
 }
-fun test() {
+
+fun class_if_as_returned_value() {
     val n = 10
 
     val r = if (n % 2 == 0) {
@@ -100,3 +101,101 @@ fun test() {
 
     println(r)
 }
+
+fun class_when_structure() {
+    val x = 20
+
+    when (x) {
+        10 -> println("É 10")
+        20 -> println("É 20")
+        30 -> println("É 30")
+        else -> println("Desconhecido")
+    }
+
+    when (x) {
+        in 0..10 -> println("Entre 0 e 10")
+        in 11..30 -> println("Entre 11 e 30")
+        else -> println("Outro intervalo")
+    }
+
+    when (x) {
+        0, 2, 4, 6 -> println("PAR")
+        else -> println("Desconhecido")
+    }
+
+    // Outro tipo de uso
+    val y = 0
+    when {
+        y > 0 -> println("POSITIVO")
+        y < 0 -> println("NEGATIVO")
+        else -> println("ZERO")
+    }
+
+    val s = when {
+        y > 0 -> "POSITIVO"
+        y < 0 -> "NEGATIVO"
+        else -> "ZERO"
+    }
+    println(s)
+}
+
+fun class_ex04_implement_a_calculator() {
+    print("1 valor: ")
+    val value1 = readln().toDouble()
+
+    print("Operador (+, -, *, /): ")
+    val operator = readln()[0]
+
+    print("2 valor: ")
+    val value2 = readln().toDouble()
+
+    val result = when (operator) {
+        '+' -> value1 + value2
+        '-' -> value1 - value2
+        '*' -> value1 * value2
+        '/' -> value1 / value2
+        else -> 0
+    }
+
+    println(result)
+}
+
+fun class_repetition_structures() {
+// while
+    var x = 0
+
+    while (x <= 10) {
+        print("$x ")
+        x++
+    }
+
+    println()
+
+    // do ... while
+    val y = 10
+    while(y < 5) {
+        print("$y")
+    }
+
+    do {
+        print("$y")
+    } while (y < 5)
+}
+fun test() {
+    println("Informe um número para ver sua Tabuada! (Tabuada de Multiplicação!")
+    print("Número: ")
+
+    val number = readln().toInt()
+    var initial = 1
+
+    while (initial <= 10) {
+        println("$number x $initial = ${number * initial}")
+        initial++
+    }
+
+}
+
+
+
+
+
