@@ -1,9 +1,7 @@
 package selection
 
 fun main() {
-    //println("Aulas separadas nas funções!")
-
-    test()
+    println("Aulas separadas nas funções!")
 }
 
 fun class_if_structure() {
@@ -161,7 +159,7 @@ fun class_ex04_implement_a_calculator() {
 }
 
 fun class_repetition_structures() {
-// while
+    // WHILE
     var x = 0
 
     while (x <= 10) {
@@ -171,7 +169,7 @@ fun class_repetition_structures() {
 
     println()
 
-    // do ... while
+    // DO ... WHILE
     val y = 10
     while(y < 5) {
         print("$y")
@@ -180,8 +178,33 @@ fun class_repetition_structures() {
     do {
         print("$y")
     } while (y < 5)
+
+    // FOR
+    for (i in 0..10) {
+        print("$i ")
+    }
+
+    println()
+
+    for (i in 10 downTo 0 step 2) {
+        print("$i ")
+    }
+
+    println()
+
+    for (i in 10 until 100 step 10) {
+        print("$i ")
+    }
+
+    // Tabuada com FOR
+    val n = 5
+    val t = 10
+    for (x in 1..t) {
+        println("$n x $x = ${n * x}")
+    }
 }
-fun test() {
+
+fun class_ex05_multiplication_table() {
     println("Informe um número para ver sua Tabuada! (Tabuada de Multiplicação!")
     print("Número: ")
 
@@ -192,10 +215,4 @@ fun test() {
         println("$number x $initial = ${number * initial}")
         initial++
     }
-
 }
-
-
-
-
-
