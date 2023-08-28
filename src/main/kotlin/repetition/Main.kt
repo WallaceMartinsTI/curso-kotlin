@@ -1,9 +1,9 @@
 package repetition
 
-fun main() {
-    //println("Aulas separadas nas funções!")
+import kotlin.random.Random
 
-    test()
+fun main() {
+    println("Aulas separadas nas funções!")
 }
 
 fun class_repetition_structures() {
@@ -85,6 +85,35 @@ fun class_break() {
     println("FIM")
 }
 
-fun test() {
+fun class_label() {
+    loop@ for (i in 'A'..'E') {
+        for (j in 1..5) {
+            print("$i$j")
+            if (j == 3) {
+                break@loop
+            }
+        }
+        println()
+    }
 
+    println("\nFIM")
+}
+
+fun class_ex06_guess_the_number() {
+    println("Adivinhe o número!")
+    val number = Random.nextInt(0, 101)
+
+    while (true) {
+        print("Tentativa: ")
+        val attempt = readln().toInt()
+
+        if (attempt == number) {
+            println("Você acertou!")
+            break
+        } else if (attempt > number) {
+            println("Tente um número menor")
+        } else {
+            println("Tente um número maior")
+        }
+    }
 }
