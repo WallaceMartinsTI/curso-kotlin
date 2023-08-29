@@ -3,13 +3,18 @@ package exceptions
 import java.lang.IllegalArgumentException
 
 fun main() {
-    val avg = StudantGrades()
-        .add(-3.0)
-        .add(5.5)
-        .add(12.0)
-        .average()
+    try {
+        val avg = StudantGrades()
+            .add(-3.0)
+            .add(5.5)
+            .add(12.0)
+            .average()
 
-    println(avg)
+        println(avg)
+    } catch (e: Exception) {
+        println("Error: ${e.message}")
+        e.printStackTrace()
+    }
 }
 
 class StudantGrades {
